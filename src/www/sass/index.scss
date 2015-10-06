@@ -1,0 +1,9 @@
+$color:red;
+$bg:green;
+$box:left;
+
+div{
+  font-size:$color;
+  background: $bg;
+  border-#{$box}-color: $color;
+}

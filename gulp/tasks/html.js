@@ -1,12 +1,12 @@
 // gulp plugin 加载
-var gulp      = require('gulp');
-var jade      = require('jade'); // jade插件
-var gulpJade  = require('gulp-jade'); // jade插件
-var htmlmin   = require('gulp-htmlmin'); // html 压缩
-var config    = require('../config').html; // html 模块路径清单
+var gulp      = require('gulp'),
+    jade      = require('jade'), // jade插件
+    gulpJade  = require('gulp-jade'), // jade插件
+    htmlmin   = require('gulp-htmlmin'), // html 压缩
+    config    = require('../config').html; // html 模块路径清单
 
 // 编译 jade文件生产html -- > 生产环境
-gulp.task('jadeCompile',function(){
+gulp.task('jadeCompile',function() {
   return gulp.src(config.jadeSrc)
     .pipe(gulpJade({
       jade: jade,
@@ -17,7 +17,7 @@ gulp.task('jadeCompile',function(){
 
 
 // html 压缩 -- > 发布环境
-gulp.task('htmlmin',function(){
+gulp.task('htmlmin',function() {
   var options = {
       removeComments: true,//清除HTML注释
       collapseWhitespace: true,//压缩HTML

@@ -16,8 +16,26 @@ module.exports = {
 
     // html 模块路径
     html: {
-       jadeSrc:  src  + type +  '/*.jade',
-       htmlSrc:  dest + type +  '/*.html',
-      htmlDest:  dest + type +  '/'
+       jadeSrc: src  + type +  '/*.jade',
+       htmlSrc: dest + type +  '/*.html',
+      htmlDest: dest + type +  '/'
+    },
+
+    // css 模块路径
+    css:  {
+        sassSrc: src  + type +  '/sass/*.scss',
+         cssSrc: dest + type +  '/css/*.css',
+       sassDest: dest + type +  '/css/'
+    },
+
+    // image  模块路径
+    image: {
+        imageSrc: src  + type +  '/images/*',
+       imageDest: dest + type +  '/images/'
+    },
+
+    // clean 模块路径
+    clean: {
+        cleanSrc: dest
     }
 };
