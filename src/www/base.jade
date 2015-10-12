@@ -2,11 +2,9 @@ doctype html
 html
     head
       title 这是一个测试页面
-      include config/config.jade
-      link(rel="stylesheet",href="#{svg_p}svg-symbols.css")
+      link(rel="stylesheet",href="svg-icon/svg-symbols.css")
       link(rel="stylesheet",href="css/index.min.css")
     body
-    include templates/header_tpl
     svg.icon(style="fill:red")
       use(xlink:href="svg-icon/svg-symbols.svg#frustrated")
     p 你好啊试试sssasss

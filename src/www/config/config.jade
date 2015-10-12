@@ -1,0 +1,49 @@
+//- 根目录
+- var baseSrc = 'www/';
+
+//- css目录
+-var css_p    = baseSrc + 'css/';
+
+//- image目录
+-var image_p  = baseSrc + 'images/';
+
+//- html目录
+-var html_p   = baseSrc;
+
+//- js目录
+-var js_p     = baseSrc + 'js/';
+
+//- 字体图标目录
+-var font_P   = baseSrc + 'font/';
+
+//- svg图标目录
+-var svg_p    = baseSrc + 'svg-icon/';
+
+
+//- js公共目录
+-var c_js_p   = baseSrc + 'js/lib/';
+
+
+//- js公共资源
+block c_js
+script(src= c_js_p + 'common.js')
+script(src= c_js_p + 'common1.js')
+
+
+//- 首页单页面资源
+block index_js
+script(src= c_js_p + 'index.js')
+
+
+//- home单页面资源
+block home_l_js
+script(src= c_js_p + 'home_l.js')
+
+block home_d_js
+script(src= c_js_p + 'home_d.js')
+
+block home_a_js
+script(src= c_js_p + 'home_a.js')
+
+block home_u_js
+script(src= c_js_p + 'home_u.js')

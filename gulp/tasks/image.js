@@ -3,6 +3,8 @@ var gulp         = require('gulp'),
     imagemin     = require('gulp-imagemin'),
     pngquant     = require('imagemin-pngquant'),
     cache        = require('gulp-cache'),
+    browserSync = require('browser-sync').create(),
+    reload      = browserSync.reload,
     config       = require('../config').image;
 
 // 压缩图片 -- 生产
@@ -15,5 +17,6 @@ gulp.task('imagemin',function() {
         svgoPlugins:  [{removeViewBox:false}],
         use:  [pngquant()]
       })))
-      .pipe(gulp.dest(config.imageDest));
+      .pipe(gulp.dest(config.imageDest))
+      .pipe(reload({stream: true}));
 });

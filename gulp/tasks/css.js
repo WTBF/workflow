@@ -5,6 +5,8 @@ var gulp         = require('gulp'),
     rename       = require('gulp-rename'),  // 文件重命名
     cssver       = require('gulp-make-css-url-version'),  // 为css中引用文件增加版本号
     minifycss    = require('gulp-minify-css'), // css 压缩
+    browserSync = require('browser-sync').create(),
+    reload      = browserSync.reload,
     config       = require('../config').css;  //  css 模块路径清单
 
 // 编译 sass
@@ -42,5 +44,6 @@ gulp.task('sass',function() {
       compatibility: '*', //类型：String 默认：''or'*' [启用兼容模式； 'ie7'：IE7兼容模式，'ie8'：IE8兼容模式，'*'：IE9+兼容模式]
       keepBreaks: false //类型：Boolean 默认：false [是否保留换行]
     }))
-    .pipe(gulp.dest(config.sassDest));
+    .pipe(gulp.dest(config.sassDest))
+    .pipe(reload({stream: true}));
 });

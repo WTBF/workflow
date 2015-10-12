@@ -11,5 +11,5 @@ gulp.task('clean', function () {
 
 // 默认任务 清空图片、样式、js并重建 运行语句 gulp
 gulp.task('make', ['clean'], function() {
-    gulp.start('jadeCompile','sass','imagemin');
+    gulp.start('jadeCompile','sass','imagemin','svgIcon');
 });

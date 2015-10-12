@@ -7,3 +7,11 @@ div{
   background: $bg;
   border-#{$box}-color: $color;
 }
+
+body{
+  background:green;
+}
+
+.header ul li{
+  float: left;
+}

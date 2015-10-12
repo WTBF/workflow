@@ -22,20 +22,46 @@ module.exports = {
     },
 
     // css 模块路径
-    css:  {
+    css: {
         sassSrc: src  + type +  '/sass/*.scss',
          cssSrc: dest + type +  '/css/*.css',
        sassDest: dest + type +  '/css/'
     },
 
+    // js 模块路径
+    js: {
+          jsSrc: src  + type +  '/js/**',
+         jsDest: dest + type +  '/js/',
+       jsConcat: dest + type +  '/js/index.js'
+    },
+
     // image  模块路径
     image: {
-        imageSrc: src  + type +  '/images/*',
-       imageDest: dest + type +  '/images/'
+        imageSrc: src + type +  '/images/*',
+       imageDest: dest+ type +  '/images/'
+    },
+
+    // svgIcon 模块路径
+    svgIcon: {
+      svgIconSrc: src + type +  '/svg-icon/*.svg',
+     svgIconDest: dest+ type +  '/svg-icon/'
     },
 
     // clean 模块路径
     clean: {
         cleanSrc: dest
+    },
+
+    // browserSync 模块路径
+    browser: {
+      src       : dest  + "/www",
+      jade      : src   + "/www/*.jade",
+      html      : dest  + "/www/*.html",
+      sass      : src   + "/www/sass/**",
+      css       : dest  + "/www/css/*.css",
+      image     : src   + "/www/images/**",
+      imagemin  : dest  + "/www/images/",
+      svgIconS  : src   + "/www/svg-icon/**",
+      svgIconD  : dest  + "/www/svg-icon/"
     }
 };

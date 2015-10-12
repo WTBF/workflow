@@ -3,6 +3,8 @@ var gulp      = require('gulp'),
     jade      = require('jade'), // jade插件
     gulpJade  = require('gulp-jade'), // jade插件
     htmlmin   = require('gulp-htmlmin'), // html 压缩
+    browserSync = require('browser-sync').create(),
+    reload      = browserSync.reload,
     config    = require('../config').html; // html 模块路径清单
 
 // 编译 jade文件生产html -- > 生产环境
@@ -12,7 +14,8 @@ gulp.task('jadeCompile',function() {
       jade: jade,
       pretty: true
     }))
-    .pipe(gulp.dest(config.htmlDest));
+    .pipe(gulp.dest(config.htmlDest))
+    .pipe(reload({stream: true}));
 });
 
 
