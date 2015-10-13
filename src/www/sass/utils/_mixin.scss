@@ -150,7 +150,7 @@
       color: rgba(255, 255, 255, 0.9);
     }
    ============================================================================ */
-     @function black($opacity){
+     @function black($opacity) {
       @return rgba(0,0,0,$opacity)
     };
     @function white($opacity){
@@ -169,7 +169,7 @@
     box-shadow: white(0.8) 0 1px 0, inset black(0.05) 0 1px 0;
   }
  ============================================================================ */
-   @mixin box-emboss($opacity, $opacity2){
+   @mixin box-emboss($opacity, $opacity2) {
      box-shadow:white($opacity) 0 1px 0, inset black($opacity2) 0 1px 0;
    }
 
@@ -229,7 +229,7 @@
     line-height: 2rem;
   }
   ============================================================================ */
-  @mixin line-height($heightValue: 12 ){
+  @mixin line-height($heightValue: 12 ) {
     line-height: $heightValue + px; //fallback for old browsers
     line-height: (0.125 * $heightValue) + rem;
   }
@@ -246,3 +246,11 @@
     line-height: 2rem;
   }
   ============================================================================ */
+
+  /* 字体美化  抗锯齿 */
+  @mixin fontNice {
+    text-rendering: optimizeLegibility;
+  	-webkit-font-smoothing: subpixel-antialiased;
+  	font-smooth: always;
+  }
+  /*============================================================================ */

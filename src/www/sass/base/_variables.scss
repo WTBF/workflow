@@ -1,0 +1,26 @@
+@charset "UTF-8";
+@import "./utils/mixin";
+/* ==========================================================================
+   SCSS variables 全局样式定义
+ ============================================================================ */
+
+// 字体
+$font : 'Open Sans', sans-serif;
+$color: '#777';
+
+body {
+	font-family: $font;
+	font-weight: normal;
+	color: $color;
+	cursor: default;
+  @include fontNice;
+}
+
+a {
+	color: #D28073;
+}
+
+a:hover {
+	color: #bbb;
+	text-decoration: none;
+}

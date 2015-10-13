@@ -1,17 +1,2 @@
-$color:red;
-$bg:green;
-$box:left;
-
-div{
-  font-size:$color;
-  background: $bg;
-  border-#{$box}-color: $color;
-}
-
-body{
-  background:green;
-}
-
-.header ul li{
-  float: left;
-}
+@charset "UTF-8";
+@import 'utils/mixin';
