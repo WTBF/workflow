@@ -1,0 +1,21 @@
+extends templates/meta_tpl
+block title
+  title Bootstrap 101 template
+block css
+  link(rel="stylesheet", href="#{css_p}login.css")
+block cotent
+  body
+    div.wrapper
+      div.container
+        form.login-form
+          div.user-logo
+            img.login-user-icon(src="#{image_p}userIcon.png")
+            p - W.TBF -
+            p look your value
+          div.form-group
+            //- label(for="user-name") Your Name
+            input(type="text",placeholder="userName").form-control#user-name
+          div.form-group
+            //- label(for="user-name") Your Pwd
+            input(type="password",placeholder="userName").form-control#user-name
+          button(type="button").btn.btn-default 登录

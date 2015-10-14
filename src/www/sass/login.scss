@@ -1,0 +1,52 @@
+@charset "UTF-8";
+@import "base/variables";
+// @import 'utils/mixin';
+
+// 绝对定位
+@mixin abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  position: absolute;
+}
+
+
+.login-form{
+  @include abs-pos(50%,0,0,50%);
+  display: block;
+  width: 500px;
+  height:300px;
+  margin:-150px 0 0 -250px;
+  // border:1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  button{
+    color:$gray_color;
+    width: 100px;
+    height: 30px;
+    margin:20px 0 0 0;
+    line-height: 10px;
+    font-family: $font;
+  }
+}
+
+.user-logo{
+  text-align: center;
+  margin:0 0 40px 0;
+  .login-user-icon{
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+  }
+}
+
+.form-group{
+  width:300px;
+  margin:0 auto 20px auto;
+  text-align: left;
+  label{
+    color:$gray_color;
+    font-weight: normal;
+  }
+}

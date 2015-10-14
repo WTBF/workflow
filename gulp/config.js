@@ -49,7 +49,9 @@ module.exports = {
 
     // clean 模块路径
     clean: {
-        cleanSrc: dest
+        cssSrc: dest + type + '/css/*.css',
+        imgSrc: dest + type + '/images/*.{jpg,png,gif}'
+
     },
 
     // browserSync 模块路径
@@ -60,7 +62,7 @@ module.exports = {
       sass      : src   + "/www/sass/**",
       css       : dest  + "/www/css/*.css",
       image     : src   + "/www/images/**",
-      imagemin  : dest  + "/www/images/",
+      imagemin  : dest  + "/www/images/**",
       svgIconS  : src   + "/www/svg-icon/**",
       svgIconD  : dest  + "/www/svg-icon/"
     }

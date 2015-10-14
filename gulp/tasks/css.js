@@ -76,4 +76,5 @@ gulp.task('sass',function() {
         remove:true //是否去掉不必要的前缀 默认：true
     }))
     .pipe(gulp.dest(config.sassDest))
+    .pipe(reload({stream: true}));
 });

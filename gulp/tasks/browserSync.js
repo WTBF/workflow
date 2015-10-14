@@ -4,7 +4,25 @@ var gulp        = require('gulp'),
     config      = require('../config').browser,
     reload      = browserSync.reload;
 
-gulp.task('servea', ['jadeCompile','sass','imagemin','svgIcon'], function() {
+// gulp.task('servea', ['jadeCompile','sass','imagemin','svgIcon'], function() {
+//
+//     browserSync.init({
+//         server: config.src
+//     });
+//
+//     gulp.watch(config.jade, ['jadeCompile']);
+//     gulp.watch(config.sass, ['sass']);
+//     gulp.watch(config.image, ['imagemin']);
+//     gulp.watch(config.svgIconS, ['svgIcon']);
+//     gulp.watch(config.html).on('change', reload);
+//     gulp.watch(config.css).on('change', reload);
+//     gulp.watch(config.imagemin).on('change', reload);
+//     gulp.watch(config.svgIconD).on('change', reload);
+//
+// });
+
+
+gulp.task('servea', function() {
 
     browserSync.init({
         server: config.src
@@ -13,12 +31,9 @@ gulp.task('servea', ['jadeCompile','sass','imagemin','svgIcon'], function() {
     gulp.watch(config.jade, ['jadeCompile']);
     gulp.watch(config.sass, ['sass']);
     gulp.watch(config.image, ['imagemin']);
-    gulp.watch(config.svgIconS, ['svgIcon']);
     gulp.watch(config.html).on('change', reload);
     gulp.watch(config.css).on('change', reload);
-    gulp.watch(config.imagemin).on('change', reload);
-    gulp.watch(config.svgIconD).on('change', reload);
-
+    // gulp.watch(config.imagemin).on('change', reload);
 });
 
-gulp.task('look', ['servea']);
+gulp.task('serve', ['servea']);

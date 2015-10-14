@@ -10,13 +10,25 @@ var gulp         = require('gulp'),
 // 压缩图片 -- 生产
 // 使用”gulp-cache”只压缩修改的图片，没有修改的图片直接从缓存文件读取
 // (C:\Users\Administrator\AppData\Local\Temp\gulp-cache)
-gulp.task('imagemin',function() {
+// gulp.task('imagemin',['clean'],function() {
+//   return gulp.src(config.imageSrc)
+//       .pipe(cache(imagemin({
+//         progressive:  true,
+//         svgoPlugins:  [{removeViewBox:false}],
+//         use:  [pngquant()]
+//       })))
+//       .pipe(gulp.dest(config.imageDest))
+//       .pipe(reload({stream: true}));
+// });
+
+
+gulp.task('imagemin',['cleanImg'],function() {
   return gulp.src(config.imageSrc)
-      .pipe(cache(imagemin({
+      .pipe(imagemin({
         progressive:  true,
         svgoPlugins:  [{removeViewBox:false}],
         use:  [pngquant()]
-      })))
+      }))
       .pipe(gulp.dest(config.imageDest))
       .pipe(reload({stream: true}));
 });
